@@ -17,32 +17,32 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0"
-                   Grid.Column="0"
-                   Grid.ColumnSpan="2"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Bottom">
-            <Run Text="Restaurant Manager"/>
-        </TextBlock>
-        <TextBlock Grid.Row="1"
-                   Grid.Column="0"
-                   Grid.ColumnSpan="2"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Bottom"
-                   FontSize="16">
-             <Run Text="Internal Test Version"/>
-        </TextBlock>
-        <TextBlock Grid.Row="2"
-                   Grid.Column="0"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center">
-            <Run Text="**Go to Orders View**"/>
-        </TextBlock>
-        <TextBlock Grid.Row="2"
-                   Grid.Column="1"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center">
-            <Run Text="**Submit Order**"/>
-        </TextBlock>
+        
+        <TextBlock  Text="Restaurant Manager"
+                    Grid.Row="0" Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom" />
+        
+        <TextBlock  Text="Internal Test Version"
+                    Grid.Row="1" Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    FontSize="16" />
+        
+        <Button x:Name="Button_GotoOrder"
+                Content="Go to Orders View"
+                Grid.Row="2" Grid.Column="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Click="Button_GotoOrder_Click"/>
+        
+        <Button x:Name="Button_SubmitOrders"
+                Content="Submit Order"
+                Grid.Row="2" Grid.Column="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Click="Button_SubmitOrders_Click"/>
     </Grid>
 </Page>

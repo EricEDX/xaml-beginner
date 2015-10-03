@@ -6,16 +6,24 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.TopAppBar>
+        <AppBar>
+            <AppBarButton x:Name="Button_Home"
+                          Icon="Home" Label="Home"
+                          Click="Button_Home_Click"/>
+        </AppBar>
+    </Page.TopAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="1"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center">
-            <Run Text="**Clear All Orders**"/>
-        </TextBlock>
+        
+        <Button x:Name="Button_ClearAllOrders"
+                Content="Clear All Orders"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+        
     </Grid>
 </Page>

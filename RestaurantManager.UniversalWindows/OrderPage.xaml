@@ -6,7 +6,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.TopAppBar>
+        <AppBar>
+            <AppBarButton x:Name="Button_Home"
+                          Icon="Home" Label="Home"
+                          HorizontalAlignment="Left"
+                          Click="Button_Home_Click"/>
+        </AppBar>
+    </Page.TopAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
@@ -20,30 +27,36 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="1"
-                   Grid.Column="1"
+
+        <TextBlock Text="Special Requests:"
+                   Grid.Row="1" Grid.Column="1"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Top">
-            <Run Text="Special Requests:"/>
-        </TextBlock>
-        <TextBlock Grid.Row="1"
-                   Grid.Column="2"
+                   VerticalAlignment="Top"/>
+        
+        <TextBlock Text="Order Items:"
+                   Grid.Row="1" Grid.Column="2"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Top">
-            <Run Text="Order Items:"/>
-        </TextBlock>
-        <TextBlock Grid.Column="0"
-                   Grid.Row="4"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center">
-            <Run Text="**Add to Order**"/>
-        </TextBlock>
-        <TextBlock Grid.Column="1"
-                   Grid.Row="4"
-                   Grid.ColumnSpan="2"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center">
-            <Run Text="**Submit Order**"/>
-        </TextBlock>
+                   VerticalAlignment="Top"/>
+
+        <Button x:Name="Button_AddtoOrder"       
+                Content="Add to Order"
+                Grid.Column="0" Grid.Row="4"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+
+        <Button x:Name="Button_SubmitOrder"
+                Content="Submit Order"
+                Grid.Column="1" Grid.Row="4"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+        
+        <ListView   Margin="5"
+                    Grid.Row="1" Grid.Column="0"
+                    Grid.RowSpan="3"/>
+        
+        <ListView   Margin="5"
+                    Grid.Row="2" Grid.Column="2"
+                    Grid.RowSpan="2"/>
     </Grid>
 </Page>
