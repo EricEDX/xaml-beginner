@@ -29,7 +29,7 @@
                     Grid.ColumnSpan="2"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom"
-                    FontSize="16" />
+                    FontSize="18" />
         
         <Button x:Name="Button_GotoOrder"
                 Content="Go to Orders View"
