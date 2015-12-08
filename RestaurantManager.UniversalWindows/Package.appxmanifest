@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="11c2330c-03c0-4729-9129-061dc4c540b1" Publisher="CN=ericl_000" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="11c2330c-03c0-4729-9129-061dc4c540b1" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="da504085-789a-4d8f-a5b2-d97d22b73dfe" Publisher="CN=Sidne" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="da504085-789a-4d8f-a5b2-d97d22b73dfe" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>RestaurantManager.UniversalWindows</DisplayName>
-    <PublisherDisplayName>ericl_000</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <PublisherDisplayName>Sidne</PublisherDisplayName>
+    <Logo>Assets/StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
@@ -15,8 +15,8 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="RestaurantManager.UniversalWindows.App">
-      <uap:VisualElements DisplayName="RestaurantManager.UniversalWindows" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="RestaurantManager.UniversalWindows" BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Restaurant Manager">
+      <uap:VisualElements DisplayName="RestaurantManager.UniversalWindows" Square150x150Logo="Assets/LargeSquareLogo.png" Square44x44Logo="Assets/SmallSquareLogo.png" Description="RestaurantManager.UniversalWindows" BackgroundColor="transparent">
+        <uap:DefaultTile ShortName="Restaurant Manager">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
           </uap:ShowNameOnTiles>

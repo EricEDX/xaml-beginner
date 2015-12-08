@@ -1,41 +1,34 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace RestaurantManager.Models
 {
-    public class DataManager
+    public abstract class DataManager : INotifyPropertyChanged
     {
-        public DataManager()
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged([CallerMemberName]string propName = null)
         {
-            this.OrderItems = new ObservableCollection<string>(
-                new List<string>
-                {
-                    "Steak, Chicken, Peas",
-                    "Rice, Chicken",
-                    "Hummus, Pita"
-                }
-            );
-
-            this.MenuItems = new List<string>
-            {
-                "Steak",
-                "Chicken",
-                "Peas",
-                "Rice",
-                "Hummus",
-                "Pita"
-            };
-
-            this.CurrentlySelectedMenuItems = new List<string>
-            {
-                "Rice",
-                "Pita"
-            };
-
+            if (PropertyChanged != null)
+            { 
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+            }
         }
 
-        public ObservableCollection<string> OrderItems { get; set; }
-        public List<string> MenuItems { get; set; }
-        public List<string> CurrentlySelectedMenuItems { get; set; }
+        protected RestaurantContext Repository { get; private set; }
+
+        public DataManager()
+        {
+            LoadData();
+        }
+
+        private async void LoadData()
+        {
+            this.Repository = new RestaurantContext();
+            await this.Repository.InitializeContextAsync();
+            OnDataLoaded();
+        }
+
+        protected abstract void OnDataLoaded();
     }
 }
